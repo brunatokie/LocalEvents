@@ -7,13 +7,17 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
+    var viewModelEvent = EventViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
+        viewModelEvent.getAllEventsData()
     }
 
-
+    
 }
 
