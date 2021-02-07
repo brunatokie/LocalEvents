@@ -44,7 +44,7 @@ class EventTableViewController: UIViewController {
         print(myNSDate)
 
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/MM/dd"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         let s = dateFormatter.string(from: myNSDate)
         return s
     }
@@ -58,21 +58,26 @@ extension EventTableViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as? EventTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath)
         
         let modelEvent = eventViewModel.arrayEvents[indexPath.row]
-        cell?.eventTitleLabel.text = modelEvent.title
         
-        if let image = modelEvent.image {
-        cell?.eventImageView.downloaded(from: image)
+        guard let eventCell = cell as? EventTableViewCell else {return cell}
+        
+        
+        eventCell.eventTitleLabel.text = modelEvent.title
+        
+        
+        if let url = URL(string: modelEvent.image ?? ""){
+            eventCell.eventImageView.loadImage(from: url)
         }
         
         if let date = modelEvent.date{
-        cell?.dateLabel.text = dateToString(date)
+            eventCell.dateLabel.text = dateToString(date)
         }
         
         
-        return cell!
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,8 +85,14 @@ extension EventTableViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("clicou")
+
+        let event = self.eventViewModel.arrayEvents[indexPath.row]
+        let eventDetailVC = DetailViewController()
+        eventDetailVC.event = event
+        eventDetailVC.modalPresentationStyle = .fullScreen
+        self.present(eventDetailVC, animated: true, completion: nil)
     }
+    
     
 }
 
