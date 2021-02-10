@@ -8,7 +8,7 @@
 import UIKit
 
 class EventTableViewCell: UITableViewCell {
-
+    
     let containerView:UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -16,8 +16,8 @@ class EventTableViewCell: UITableViewCell {
         return view
     }()
 
-    let eventImageView:UIImageView = {
-        let img = UIImageView()
+    let eventImageView: CustomImageView = {
+        let img = CustomImageView()
         img.contentMode = .scaleAspectFill
         img.translatesAutoresizingMaskIntoConstraints = false
         img.layer.cornerRadius = 10
@@ -27,7 +27,7 @@ class EventTableViewCell: UITableViewCell {
 
     let eventTitleLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: 15)
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -35,7 +35,7 @@ class EventTableViewCell: UITableViewCell {
 
     let dateLabel:UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 12)
         label.textColor =  .black
         label.layer.cornerRadius = 5
         label.clipsToBounds = true

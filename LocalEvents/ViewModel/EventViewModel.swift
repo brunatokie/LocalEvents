@@ -6,30 +6,62 @@
 //
 
 import UIKit
+import Alamofire
 
-class EventViewModel{
+class EventViewModel: UIViewController{
     
-    weak var vc: ViewController?
+    weak var vc: EventTableViewController?
+    weak var checkinVC : CheckinViewController?
     var arrayEvents = [Event]()
     
+    private let getAllEventsURL = "http://5f5a8f24d44d640016169133.mockapi.io/api/events"
+    private let checkinURL = "http://5f5a8f24d44d640016169133.mockapi.io/api/checkin"
+    
     func getAllEventsData(){
-        URLSession.shared.dataTask(with: URL(string:"http://5f5a8f24d44d640016169133.mockapi.io/api/events")!) { (data, response, error) in
-            if error == nil {
-                if let _data = data{
+        AF.request(getAllEventsURL).response { response in
+    
+                if let _data = response.data{
                     do {
                         let eventResponse = try JSONDecoder().decode([Event].self , from: _data)
                         self.arrayEvents.append(contentsOf: eventResponse)
+                       
+                        DispatchQueue.main.async {
+                            self.vc?.eventsTableView.reloadData()
+                            
+                        }
+                        
                     } catch let err{
                       
                         print(err.localizedDescription)
                     }
                 }
-            } else {
-               
-                print(error?.localizedDescription)
-                
+            }
                 
             }
-        }.resume()
+    
+    
+    func postCheckIn(){
+
+        let parameters: [String: Any] = [
+            "eventId": checkinVC?.checkinEvent?.id,
+            "name": checkinVC?.name,
+            "email": checkinVC?.email
+    ]
+        
+        AF.request(checkinURL, method:.post, parameters: parameters,encoding: JSONEncoding.default) .responseJSON { (response) in
+            if let _data = response.data{
+
+                do {
+                    let responseEvent = try? JSONDecoder().decode([Event].self, from: _data)
+                    print("post com sucesso")
+                    self.checkinVC?.alertSuccess()
+                } catch let err{
+                    print(err.localizedDescription)
+                }
+
+            }}
     }
+    
+    
+    
 }

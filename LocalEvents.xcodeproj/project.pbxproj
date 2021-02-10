@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		AB291C5F166C096F5B23FDBA /* Pods_LocalEvents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FE465AD9617BBBA6EC3A773 /* Pods_LocalEvents.framework */; };
+		FE4D6A9025CEE8C4002E0E1D /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D6A8F25CEE8C4002E0E1D /* EventTableViewCell.swift */; };
+		FE4D6A9D25CF557B002E0E1D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D6A9C25CF557B002E0E1D /* DetailViewController.swift */; };
+		FE4D6AA425CF61D9002E0E1D /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4D6AA325CF61D9002E0E1D /* CustomImageView.swift */; };
 		FE58BC9E25CDD523003B2C92 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58BC9D25CDD523003B2C92 /* Event.swift */; };
 		FE58BCA425CDD7DE003B2C92 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58BCA325CDD7DE003B2C92 /* EventViewModel.swift */; };
-		FE58BCAA25CDE1F6003B2C92 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58BCA925CDE1F6003B2C92 /* UserCell.swift */; };
+		FE58BCAE25CDED1B003B2C92 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58BCAD25CDED1B003B2C92 /* EventTableViewController.swift */; };
+		FE7692D725D0CC2A00AE1B93 /* EventLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7692D625D0CC2A00AE1B93 /* EventLocation.swift */; };
+		FEAA035925D2C52D00577952 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA035825D2C52D00577952 /* CheckinViewController.swift */; };
 		FEB67F0E25CCA0AE00BCA9CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB67F0D25CCA0AE00BCA9CB /* AppDelegate.swift */; };
 		FEB67F1025CCA0AE00BCA9CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB67F0F25CCA0AE00BCA9CB /* SceneDelegate.swift */; };
-		FEB67F1225CCA0AE00BCA9CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB67F1125CCA0AE00BCA9CB /* ViewController.swift */; };
 		FEB67F1725CCA0AF00BCA9CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEB67F1625CCA0AF00BCA9CB /* Assets.xcassets */; };
 		FEB67F1A25CCA0AF00BCA9CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB67F1825CCA0AF00BCA9CB /* LaunchScreen.storyboard */; };
 		FEB67F3A25CCB8C700BCA9CB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB67F3925CCB8C700BCA9CB /* APIService.swift */; };
@@ -23,13 +27,17 @@
 		79A42F46A4819F174C7C2ED4 /* Pods-LocalEvents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalEvents.release.xcconfig"; path = "Target Support Files/Pods-LocalEvents/Pods-LocalEvents.release.xcconfig"; sourceTree = "<group>"; };
 		8FE465AD9617BBBA6EC3A773 /* Pods_LocalEvents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocalEvents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB591C34079B8251E4804A57 /* Pods-LocalEvents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocalEvents.debug.xcconfig"; path = "Target Support Files/Pods-LocalEvents/Pods-LocalEvents.debug.xcconfig"; sourceTree = "<group>"; };
+		FE4D6A8F25CEE8C4002E0E1D /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		FE4D6A9C25CF557B002E0E1D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FE4D6AA325CF61D9002E0E1D /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 		FE58BC9D25CDD523003B2C92 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../../../../Downloads/Event.swift; sourceTree = "<group>"; };
 		FE58BCA325CDD7DE003B2C92 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
-		FE58BCA925CDE1F6003B2C92 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		FE58BCAD25CDED1B003B2C92 /* EventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		FE7692D625D0CC2A00AE1B93 /* EventLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLocation.swift; sourceTree = "<group>"; };
+		FEAA035825D2C52D00577952 /* CheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		FEB67F0A25CCA0AE00BCA9CB /* LocalEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB67F0D25CCA0AE00BCA9CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEB67F0F25CCA0AE00BCA9CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FEB67F1125CCA0AE00BCA9CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FEB67F1625CCA0AF00BCA9CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEB67F1925CCA0AF00BCA9CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEB67F1B25CCA0AF00BCA9CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				FE58BC9D25CDD523003B2C92 /* Event.swift */,
+				FE7692D625D0CC2A00AE1B93 /* EventLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				FE58BCA325CDD7DE003B2C92 /* EventViewModel.swift */,
+				FE4D6AA325CF61D9002E0E1D /* CustomImageView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -127,7 +137,9 @@
 		FEB67F3625CCB88E00BCA9CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FEB67F1125CCA0AE00BCA9CB /* ViewController.swift */,
+				FE58BCAD25CDED1B003B2C92 /* EventTableViewController.swift */,
+				FE4D6A9C25CF557B002E0E1D /* DetailViewController.swift */,
+				FEAA035825D2C52D00577952 /* CheckinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -135,7 +147,7 @@
 		FEB67F3725CCB89500BCA9CB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE58BCA925CDE1F6003B2C92 /* UserCell.swift */,
+				FE4D6A8F25CEE8C4002E0E1D /* EventTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,13 +265,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEB67F1225CCA0AE00BCA9CB /* ViewController.swift in Sources */,
+				FE4D6A9025CEE8C4002E0E1D /* EventTableViewCell.swift in Sources */,
+				FE7692D725D0CC2A00AE1B93 /* EventLocation.swift in Sources */,
 				FE58BCA425CDD7DE003B2C92 /* EventViewModel.swift in Sources */,
 				FEB67F0E25CCA0AE00BCA9CB /* AppDelegate.swift in Sources */,
 				FEB67F3A25CCB8C700BCA9CB /* APIService.swift in Sources */,
+				FE58BCAE25CDED1B003B2C92 /* EventTableViewController.swift in Sources */,
 				FEB67F1025CCA0AE00BCA9CB /* SceneDelegate.swift in Sources */,
+				FE4D6A9D25CF557B002E0E1D /* DetailViewController.swift in Sources */,
 				FE58BC9E25CDD523003B2C92 /* Event.swift in Sources */,
-				FE58BCAA25CDE1F6003B2C92 /* UserCell.swift in Sources */,
+				FE4D6AA425CF61D9002E0E1D /* CustomImageView.swift in Sources */,
+				FEAA035925D2C52D00577952 /* CheckinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,8 @@ import UIKit
 class EventTableViewController: UIViewController {
     
     var eventViewModel = EventViewModel()
-    
     let eventsTableView = UITableView()
-    private let identifier = "EventCell" //rever o uso do private
+    private let identifier = "EventCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,16 +37,8 @@ class EventTableViewController: UIViewController {
         eventsTableView.register(EventTableViewCell.self, forCellReuseIdentifier: identifier)
 
     }
-    func dateToString(_ date: Int) -> String{
-        let timeInterval = TimeInterval(date)
-        var myNSDate = Date(timeIntervalSince1970: timeInterval)
-        print(myNSDate)
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        let s = dateFormatter.string(from: myNSDate)
-        return s
-    }
+    
+    
 }
  
 extension EventTableViewController: UITableViewDataSource, UITableViewDelegate{
@@ -68,7 +59,7 @@ extension EventTableViewController: UITableViewDataSource, UITableViewDelegate{
         eventCell.eventTitleLabel.text = modelEvent.title
         
         
-        if let url = URL(string: modelEvent.image ?? ""){
+        if let url = URL(string: modelEvent.image ?? "noImage"){
             eventCell.eventImageView.loadImage(from: url)
         }
         
@@ -88,8 +79,8 @@ extension EventTableViewController: UITableViewDataSource, UITableViewDelegate{
 
         let event = self.eventViewModel.arrayEvents[indexPath.row]
         let eventDetailVC = DetailViewController()
-        eventDetailVC.event = event
-        eventDetailVC.modalPresentationStyle = .fullScreen
+        eventDetailVC.selectedEvent = event
+
         self.present(eventDetailVC, animated: true, completion: nil)
     }
     

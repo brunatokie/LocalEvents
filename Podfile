@@ -6,5 +6,7 @@ target 'LocalEvents' do
   use_frameworks!
 
   # Pods for LocalEvents
-pod 'Alamofire'	
+pod 'Alamofire'
+pod 'TinyConstraints'
+
 end
