@@ -17,6 +17,12 @@ class EventViewModel: UIViewController{
     private let getAllEventsURL = "http://5f5a8f24d44d640016169133.mockapi.io/api/events"
     private let checkinURL = "http://5f5a8f24d44d640016169133.mockapi.io/api/checkin"
     
+    
+    override func viewDidLoad() {
+        <#code#>
+    }
+    viewwillpre
+    
     func getAllEventsData(){
         AF.request(getAllEventsURL).response { response in
     

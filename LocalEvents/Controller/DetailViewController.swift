@@ -62,6 +62,7 @@ class DetailViewController: UIViewController{
         eventTitle.centerXAnchor.constraint(equalTo: safeArea.centerXAnchor).isActive = true
         eventTitle.textColor = .black
         eventTitle.font = UIFont.boldSystemFont(ofSize: 15)
+        print(eventTitle.frame)
     }
     
     func setupImage(){
@@ -73,6 +74,7 @@ class DetailViewController: UIViewController{
         imageEvent.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 40).isActive = true
         imageEvent.widthAnchor.constraint(equalTo: safeArea.widthAnchor, multiplier: 0.5).isActive = true
         imageEvent.heightAnchor.constraint(equalTo: imageEvent.widthAnchor).isActive = true
+        print(imageEvent.frame)
     }
     
     func setupDescription(){
@@ -85,7 +87,7 @@ class DetailViewController: UIViewController{
         eventDescription.font = UIFont.boldSystemFont(ofSize: 12)
         eventDescription.numberOfLines = 0
         eventDescription.lineBreakMode = .byWordWrapping
-    
+        print(eventDescription.frame)
         
     }
     
